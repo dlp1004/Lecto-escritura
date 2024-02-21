@@ -1,4 +1,5 @@
 import streamlit as st
+import firebase_admin
 
 st.set_page_config(
     page_title="Multipage App",
