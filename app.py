@@ -1,20 +1,18 @@
 import streamlit as st
 import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+
+# Fetch the service account key JSON file contents
+
+# Initialize the app with a service account, granting admin privileges
 
 st.set_page_config(
-    page_title="Multipage App",
-    page_icon="👋",
+    page_title="Lecto-escritura UBU",
+    page_icon="📖",
 )
 
-st.title("Main Page")
+st.title("Lecto-escritura")
 st.sidebar.success("Select a page above.")
 
-if "my_input" not in st.session_state:
-    st.session_state["my_input"] = ""
-
-my_input = st.text_input("Input a text here", st.session_state["my_input"])
-submit = st.button("Submit")
-if submit:
-    st.session_state["my_input"] = my_input
-    st.write("You have entered: ", my_input)
-    
+st.text('¡Bienvenido a nuestra aplicación de lecto-escritura! \nSelecciona una categoría en la lista de la izquierda para empezar a jugar ')
